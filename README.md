@@ -45,7 +45,7 @@ Die globalen Gruppen werden anschließend den entsprechenden domänenlokalen Gru
 <p align="center"><img src="bilder/dlg.png"></p>
 
 Als konkretes Beispiel:
-`Benutzer → GG__MUC_Vertrieb → DLG_MUC_Drucker_Vertrieb → Freigabeberechtigung`
+`Benutzer → GG_MUC_Vertrieb → DLG_MUC_Drucker_Vertrieb → Freigabeberechtigung`
 
 Durch die Anwendung des AGDLP-Prinzips werden Berechtigungen nicht direkt einzelnen Benutzern, sondern den entsprechenden Gruppen zugewiesen. Somit wird die Verwaltung von Berechtigungen übersichtlicher und erleichtert die spätere Anpassung.
 
