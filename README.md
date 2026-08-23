@@ -40,7 +40,7 @@ Diesen Gruppen werden die jeweils zugehörigen Benutzer der entsprechenden Abtei
 
 <p align="center"><img src="bilder/gg_benutzer.png"></p> 
 
-Die globalen Gruppen werden anschließend den entsprechenden domänenlokalen Gruppen zugeordnet, welche die benötigten Berechtigungen auf Ressourcen erhalten:
+Die globalen Gruppen werden anschließend den entsprechenden domänenlokalen Gruppen zugeordnet. Diese erhalten die benötigten Berechtigungen auf die Ressourcen:
 
 <p align="center"><img src="bilder/dlg.png"></p>
 
