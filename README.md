@@ -24,15 +24,15 @@ Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) au
 
 Die Benutzer werden anhand ihrer Abteilung organisiert. Die Gruppen werden getrennt nach lokalen und domänenweiten Gruppen verwaltet, um das AGDLP-Prinzip umzusetzen. Hierbei gibt es für den Standort München vier globale Sicherheitsgruppen, jeweils eine pro Abteilung:
 
-![wind-serv](bilder/gg.png)
+<p align="center"><img src="bilder/gg.png"></p> 
 
 Diesen Gruppen werden die jeweils zugehörigen Benutzer der entsprechenden Abteilung zugeordnet. Dadurch wird sichergestellt, dass Benutzer nur über ihre Gruppenzugehörigkeit die für ihre Abteilung vorgesehenen Berechtigungen erhalten: 
 
-![wind-serv](bilder/gg_benutzer.png)
+<p align="center"><img src="bilder/gg_benutzer.png"></p> 
 
 Die globalen Gruppen werden anschließend den entsprechenden domänenlokalen Gruppen zugeordnet, welche die benötigten Berechtigungen auf Ressourcen erhalten:
 
-![wind-serv](bilder/dlg.png)
+<p align="center"><img src="bilder/dlg.png"></p>
 
 Als konkretes Beispiel:
 `Benutzer → GG__MUC_Vertrieb → DLG_MUC_Drucker_Vertrieb → Freigabeberechtigung`
@@ -55,7 +55,7 @@ Anschließend die folgenden Einstellungen festlegen:
 - Minimale Kennwortlänge: 12 Zeichen
 - Minimales Kennwortalter: 30 Tage
 
-![wind-serv](bilder/kennwort.png)
+<p align="center"><img src="bilder/kennwort.png"></p> 
 
 Die GPO noch entsprechend zuweisen.
 
@@ -79,7 +79,7 @@ Anschließend die folgenden Einstellungen festlegen:
 - Kontosperrdauer: 30 Minuten
 - Zurücksetzungsdauer des Kontosperrungszählers: 30 Minuten
 
-![wind-serv](bilder/kontosperrungsrichtlinie.png)
+<p align="center"><img src="bilder/kontosperrungsrichtlinie.png"></p> 
 
 Die GPO noch entsprechend zuweisen.
 
@@ -87,14 +87,14 @@ Test:
 - Am Client mit einem Testbenutzer anmelden und dreimal ein falsches Passwort eingeben.
 - Anschließend Meldung, dass das Konto vorübergehend gesperrt ist.
 
-![wind-serv](bilder/kontosperrungsrichtlinie_test.png)
+<p align="center"><img src="bilder/kontosperrungsrichtlinie_test.png"></p> 
 
 ### Laufwerkfreigabe
 Diese Richtlinie soll die Zuweisung eines Laufwerks auf eine bestimmte Personengruppe festlegen.
 
 Dazu im Explorer auf dem Server zu dem entsprechenden Laufwerk navigieren und die entsprechenden Freigabeberechtigungen für die jeweiligen domänenlokalen Sicherheitsgruppen definieren:
 
-![wind-serv](bilder/laufwerkfreigabe.png)
+<p align="center"><img src="bilder/laufwerkfreigabe.png"></p> 
 
 Im Gruppenrichtlinienverwaltungs-Editor eine neue GPO erstellen und bearbeiten.
 Zu dem folgendem Pfad navigieren:
@@ -102,22 +102,22 @@ Zu dem folgendem Pfad navigieren:
 
 Anschließend die folgenden Einstellungen unter 'Allgemein' festlegen: 
 
-![wind-serv](bilder/lw_f_allgemein.png)
+<p align="center"><img src="bilder/lw_f_allgemein.png"></p> 
 
 Unter gemeinsame Optionen den Haken bei `Zielgruppenadressierung auf Elementebene` setzen und bei `Zielgruppenadressierung...` die globale Sicherheitsgruppe hinzufügen: 
 
-![wind-serv](bilder/lw_f_gg.png)
+<p align="center"><img src="bilder/lw_f_gg.png"></p> 
 
 Die GPO noch entsprechend zuweisen.
 
 Test:
 - Am Client mit einem Testbenutzer aus dem Vertrieb anmelden und im Explorer prüfen, ob Laufwerk `F` angezeigt wird:
 
-![wind-serv](bilder/lw_bei_gg.png)
+<p align="center"><img src="bilder/lw_bei_gg.png"></p> 
 
 - Am Client mit einem Testbenutzer aus einer anderen Abteilung anmelden und im Explorer prüfen, ob das Laufwerk `F` nicht angezeigt wird.
-- 
-![wind-serv](bilder/lw_fehlende_gg.png)
+ 
+<p align="center"><img src="bilder/lw_fehlende_gg.png"></p> 
 
 ### Lokale Anmeldung am Server und per RDP nur für IT-Abteilung erlauben
 Diese Richtlinie legt fest, welche Benutzergruppen sich lokal oder per Remote Desktop (RDP) am Server anmelden dürfen. 
@@ -128,14 +128,14 @@ Zu dem folgendem Pfad navigieren:
 
 Anschließend die folgende Richtlinie aktivieren: 
 
-![wind-serv](bilder/rdp_akt.png)
+<p align="center"><img src="bilder/rdp_akt.png"></p> 
 
 Außerdem muss eine eingehende Firewallregel erstellt werden, deshalb zu dem folgendem Pfad navigieren:
 `Computerkonfiguration → Richtlinien → Windows-Einstellungen → Sicherheitseinstellungen → Windows Defender Firewall mit erweiterter Sicherheit → Eingehende Regeln` 
 
 Eine neue eingehende Regel erstellen mit TCP und Port 3389:
 
-![wind-serv](bilder/rdp_firewall.png)
+<p align="center"><img src="bilder/rdp_firewall.png"></p> 
 
 Die GPO entsprechend zuweisen.
 
@@ -148,19 +148,19 @@ Anschließend werden folgende Richtlinien angepasst:
 - Anmelden über Remotedesktopdienste zulassen → IT-Sicherheitsgruppe (z. B. GG_IT) wird hinzugefügt, damit nur autorisierte Benutzer per RDP auf den Server zugreifen können
 - Lokales Anmelden zulassen → Die Berechtigung wird ebenfalls auf die gewünschten Benutzergruppen beschränkt
   
-![wind-serv](bilder/benutzerrechte.png)
+<p align="center"><img src="bilder/benutzerrechte.png"></p> 
 
 Test:
 - Am Server mit einem Testbenutzer anmelden, der nicht in der IT-Abteilung ist, und prüfen, ob eine lokale Anmeldung möglich ist.
   
-![wind-serv](bilder/lokal_test.png)
+<p align="center"><img src="bilder/lokal_test.png"></p> 
 
 - Am Client mit einem Testbenutzer anmelden, der in der IT-Abteilung ist, und prüfen, ob sich dieser per RDP mit dem Server verbinden kann.
 
-![wind-serv](bilder/rdp_admin.png)
+<p align="center"><img src="bilder/rdp_admin.png"></p> 
 
-![wind-serv](bilder/rdp_admin1.png)
+<p align="center"><img src="bilder/rdp_admin1.png"></p> 
 
 - Am Client mit einem Testbenutzer anmelden, der nicht in der IT-Abteilung ist, und prüfen, ob sich dieser per RDP mit dem Server verbinden kann.
 
-![wind-serv](bilder/rdp_test.png)
+<p align="center"><img src="bilder/rdp_test.png"></p>
