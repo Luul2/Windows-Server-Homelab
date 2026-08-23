@@ -17,7 +17,7 @@ Voraussetzungen
 
 ## Umsetzung des AGDLP-Prinzips im Active-Directory
 
-Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) aufgebaut. Zunächst wird nach Standort unterteilt. Innerhalb des Standorts befinden sich die Bereiche Benutzer, Computer und Gruppen.
+Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) aufgebaut:
     
     Standort
     ├── Benutzer
@@ -30,7 +30,7 @@ Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) au
         ├── Global
         └── Lokal
 
-Die Benutzer werden anhand ihrer Abteilung organisiert. Die Gruppen werden getrennt nach lokalen und domänenweiten Gruppen verwaltet, um das AGDLP-Prinzip umzusetzen. Hierbei gibt es für den Standort München vier globale Sicherheitsgruppen, jeweils eine pro Abteilung:
+Hierbei werden innerhalb eines Standorts die Bereiche Benutzer, Computer und Gruppen definiert, wobei die Benutzer Abteilungsbasiert zugeordnet werden. Zudem werden die Gruppen in globale und lokale Gruppen unterteilt, um das AGDLP-Prinzip umzusetzen. Für den Standort München gibt es dabei vier globale Sicherheitsgruppen, jeweils eine für jede Abteilung:
 
 <p align="center"><img src="bilder/gg.png"></p> 
 
