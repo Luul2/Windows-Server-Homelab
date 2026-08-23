@@ -141,6 +141,7 @@ Anschließend die folgende Richtlinie aktivieren:
 <p align="center"><img src="bilder/rdp_akt.png"></p> 
 
 Außerdem muss eine eingehende Firewallregel erstellt werden, deshalb zu dem folgendem Pfad navigieren:
+
 `Computerkonfiguration → Richtlinien → Windows-Einstellungen → Sicherheitseinstellungen → Windows Defender Firewall mit erweiterter Sicherheit → Eingehende Regeln` 
 
 Eine neue eingehende Regel erstellen mit TCP und Port 3389:
