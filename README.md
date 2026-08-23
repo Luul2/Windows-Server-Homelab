@@ -67,7 +67,7 @@ Anschließend die folgenden Einstellungen festlegen:
 
 <p align="center"><img src="bilder/kennwort.png"></p> 
 
-Die GPO noch entsprechend zuweisen.
+Die GPO entsprechend zuweisen.
 
 Test:
 - Testbenutzer anlegen und „Benutzer muss Kennwort bei der nächsten Anmeldung ändern“ aktivieren.
@@ -91,7 +91,7 @@ Anschließend die folgenden Einstellungen festlegen:
 
 <p align="center"><img src="bilder/kontosperrungsrichtlinie.png"></p> 
 
-Die GPO noch entsprechend zuweisen.
+Die GPO entsprechend zuweisen.
 
 Test:
 - Am Client mit einem Testbenutzer anmelden und dreimal ein falsches Passwort eingeben.
@@ -118,7 +118,7 @@ Unter gemeinsame Optionen den Haken bei `Zielgruppenadressierung auf Elementeben
 
 <p align="center"><img src="bilder/lw_f_gg.png"></p> 
 
-Die GPO noch entsprechend zuweisen.
+Die GPO entsprechend zuweisen.
 
 Test:
 - Am Client mit einem Testbenutzer aus dem Vertrieb anmelden und im Explorer prüfen, ob Laufwerk `F` angezeigt wird:
