@@ -30,11 +30,13 @@ Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) au
         ├── Global
         └── Lokal
 
-Hierbei werden innerhalb eines Standorts die Bereiche Benutzer, Computer und Gruppen definiert, wobei die Benutzer Abteilungsbasiert zugeordnet werden. Zudem werden die Gruppen in globale und lokale Gruppen unterteilt, um das AGDLP-Prinzip umzusetzen. Für den Standort München gibt es dabei vier globale Sicherheitsgruppen, jeweils eine für jede Abteilung:
+Hierbei werden innerhalb eines Standorts die Bereiche Benutzer, Computer und Gruppen definiert, wobei die Benutzer Abteilungsbasiert zugeordnet werden. Zudem werden die Gruppen in globale und lokale Gruppen unterteilt, um das AGDLP-Prinzip umzusetzen. 
+
+Für den Standort München gibt es dabei vier globale Sicherheitsgruppen, jeweils eine für jede Abteilung:
 
 <p align="center"><img src="bilder/gg.png"></p> 
 
-Diesen Gruppen werden die jeweils zugehörigen Benutzer der entsprechenden Abteilung zugeordnet. Dadurch wird sichergestellt, dass Benutzer nur über ihre Gruppenzugehörigkeit die für ihre Abteilung vorgesehenen Berechtigungen erhalten: 
+Diesen Gruppen werden die jeweils zugehörigen Benutzer der entsprechenden Abteilung zugeordnet:
 
 <p align="center"><img src="bilder/gg_benutzer.png"></p> 
 
