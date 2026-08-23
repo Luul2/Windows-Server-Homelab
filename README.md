@@ -1,9 +1,8 @@
 # Windows-Server-Homelab
-Das Homelab dient als Testumgebung, um praktische Erfahrungen mit Active Directory und dem Gruppenrichtlinienverwaltungs-Editor zu sammeln. Hierbei wird das AGDLP-Prinzip zur Vergabe von Berechtigungen in Active Directory erprobt. Zudem werden verschiedene Gruppenrichtlinien (GPOs) erstellt und deren Auswirkungen auf Benutzer getestet.
+Dieses Homelab dient als Testumgebung, um praktische Erfahrungen mit Active Directory und dem Gruppenrichtlinienverwaltungs-Editor zu sammeln. Hierbei wird das AGDLP-Prinzip zur Vergabe von Berechtigungen in Active Directory erprobt. Zudem werden verschiedene Gruppenrichtlinien (GPOs) erstellt und deren Auswirkungen auf Benutzer getestet.
 
 Voraussetzungen
- - Virtuelle Maschine mit Windows Server
- - Active Directory Domain Services (AD DS) installiert
+ - Virtuelle Maschine mit Windows Server und Active Directory Domain Services (AD DS) installiert
  - Virtuelle Maschine mit Windows Client, der der Domäne beigetreten ist
  - Netzwerkverbindung zwischen Server und Client
 
