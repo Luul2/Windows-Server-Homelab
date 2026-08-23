@@ -65,7 +65,7 @@ Test:
 - Die Anmeldung wird aufgrund der Komplexitätsanforderungen abgelehnt.
 - Anschließend ein gültiges Kennwort setzen und die Anmeldung erfolgreich durchführen.
 
-      ![wind-serv](bilder/kennwort_test.png)
+<p align="center"><img src="bilder/kennwort_test.png"></p>
 
 ### Kontosperrungsrichtlinie
 Diese Richtlinie soll vor Brute-Force-Angriffen schützen, indem nach mehreren fehlgeschlagenen Anmeldeversuchen das Benutzerkonto vorübergehend gesperrt wird.
