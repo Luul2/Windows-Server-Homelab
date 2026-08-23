@@ -116,6 +116,7 @@ Test:
 ![wind-serv](bilder/lw_bei_gg.png)
 
 - Am Client mit einem Testbenutzer aus einer anderen Abteilung anmelden und im Explorer prüfen, ob das Laufwerk `F` nicht angezeigt wird.
+- 
 ![wind-serv](bilder/lw_fehlende_gg.png)
 
 ### Lokale Anmeldung am Server und per RDP nur für IT-Abteilung erlauben
