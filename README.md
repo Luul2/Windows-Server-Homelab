@@ -102,7 +102,7 @@ Test:
 ### Laufwerkfreigabe
 Diese Richtlinie soll die Zuweisung eines Laufwerks auf eine bestimmte Personengruppe festlegen.
 
-Dazu im Explorer auf dem Server zu dem entsprechenden Laufwerk navigieren und die entsprechenden Freigabeberechtigungen für die jeweiligen domänenlokalen Sicherheitsgruppen definieren:
+Dazu im Explorer auf dem Server zu dem Laufwerk navigieren und die entsprechenden Freigabeberechtigungen für die domänenlokalen Sicherheitsgruppen definieren:
 
 <p align="center"><img src="bilder/laufwerkfreigabe.png"></p> 
 
