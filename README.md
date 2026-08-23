@@ -158,8 +158,8 @@ Hierzu wird zu folgendem Pfad navigiert:
 `Computerkonfiguration → Richtlinien → Windows-Einstellungen → Sicherheitseinstellungen → Lokale Richtlinien → Zuweisen von Benutzerrechten`
 
 Anschließend werden folgende Richtlinien angepasst:
-- Anmelden über Remotedesktopdienste zulassen → globale Sicherheitsgruppe hinzufügen, für die der Zugriff erlaubt sein soll.
-- Lokales Anmelden zulassen → globale Sicherheitsgruppe hinzufügen, die sich lokal anmelden darf
+- Anmelden über Remotedesktopdienste zulassen → globale Sicherheitsgruppe hinzufügen, für die der Zugriff erlaubt sein soll
+- Lokales Anmelden zulassen → globale Sicherheitsgruppe hinzufügen, für die die lokale Anmeldung am Server erlaubt sein soll
   
 <p align="center"><img src="bilder/benutzerrechte.png"></p> 
 
