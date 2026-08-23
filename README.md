@@ -110,11 +110,11 @@ Im Gruppenrichtlinienverwaltungs-Editor eine neue GPO erstellen und bearbeiten.
 Zu dem folgendem Pfad navigieren:
 `Benutzerkonfigurationen → Einstellungen → Windows-Einstellungen → Laufwerkzuordnungen` 
 
-Anschließend die folgenden Einstellungen unter 'Allgemein' festlegen: 
+Anschließend die folgenden Einstellungen unter `Allgemein` festlegen: 
 
 <p align="center"><img src="bilder/lw_f_allgemein.png"></p> 
 
-Unter gemeinsame Optionen den Haken bei `Zielgruppenadressierung auf Elementebene` setzen und bei `Zielgruppenadressierung...` die globale Sicherheitsgruppe hinzufügen: 
+Unter `gemeinsame Optionen` den Haken bei `Zielgruppenadressierung auf Elementebene` setzen und bei `Zielgruppenadressierung...` die globale Sicherheitsgruppe hinzufügen: 
 
 <p align="center"><img src="bilder/lw_f_gg.png"></p> 
 
