@@ -130,11 +130,10 @@ Test:
 <p align="center"><img src="bilder/lw_fehlende_gg.png"></p> 
 
 ### Lokale Anmeldung am Server und per RDP nur für IT-Abteilung erlauben
-Diese Richtlinie legt fest, welche Benutzergruppen sich lokal oder per Remote Desktop (RDP) am Server anmelden dürfen. 
+Diese Richtlinie legt fest, welche Benutzergruppen sich lokal oder per RDP am Server anmelden dürfen. 
 
 Für die Aktivierung von RDP zuerst im Gruppenrichtlinienverwaltungs-Editor eine neue GPO erstellen und bearbeiten.
 Zu dem folgendem Pfad navigieren:
-
 `Computerkonfiguration → Richtlinien → Administrative Vorlagen → Windows-Komponenten → Remotedesktopdienste → Remotedesktopsitzungshost → Verbindungen` 
 
 Anschließend die folgende Richtlinie aktivieren: 
