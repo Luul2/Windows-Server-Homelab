@@ -19,8 +19,8 @@ Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) au
     │   └── Abteilung 4
     ├── Computer
     └── Gruppen
-        ├── Lokal
-        └── Domäne
+        ├── Global
+        └── Lokal
 
 Die Benutzer werden anhand ihrer Abteilung organisiert. Die Gruppen werden getrennt nach lokalen und domänenweiten Gruppen verwaltet, um das AGDLP-Prinzip umzusetzen. Hierbei gibt es für den Standort München vier globale Sicherheitsgruppen, jeweils eine pro Abteilung:
 
@@ -33,6 +33,9 @@ Diesen Gruppen werden die jeweils zugehörigen Benutzer der entsprechenden Abtei
 Die globalen Gruppen werden anschließend den entsprechenden domänenlokalen Gruppen zugeordnet, welche die benötigten Berechtigungen auf Ressourcen erhalten:
 
 ![wind-serv](bilder/dlg.png)
+
+Als konkretes Beispiel:
+`Benutzer → GG__MUC_Vertrieb → DLG_MUC_Drucker_Vertrieb → Freigabeberechtigung`
 
 Durch die Anwendung des AGDLP-Prinzips werden Berechtigungen nicht direkt einzelnen Benutzern, sondern den entsprechenden Gruppen zugewiesen. Somit wird die Verwaltung von Berechtigungen übersichtlicher und erleichtert die spätere Anpassung.
 
@@ -58,7 +61,7 @@ Die GPO noch entsprechend zuweisen.
 
 Test:
 - Testbenutzer anlegen und „Benutzer muss Kennwort bei der nächsten Anmeldung ändern“ aktivieren.
-- Am Client mit dem Testbenutzer anmelden und 12345 als neues Kennwort versuchen.
+- Am Client mit dem Testbenutzer anmelden und bei der Kennwortänderung 12345 als neues Kennwort festlegen. 
 - Die Anmeldung wird aufgrund der Komplexitätsanforderungen abgelehnt.
 - Anschließend ein gültiges Kennwort setzen und die Anmeldung erfolgreich durchführen.
 
@@ -112,8 +115,7 @@ Test:
 
 ![wind-serv](bilder/lw_bei_gg.png)
 
-- Am Client mit einem Testbenutzer aus einer anderen Abteilung anmelden und im Explorer prüfen, ob Laufwerk `F` angezeigt wird:
-
+- Am Client mit einem Testbenutzer aus einer anderen Abteilung anmelden und im Explorer prüfen, ob das Laufwerk `F` nicht angezeigt wird.
 ![wind-serv](bilder/lw_fehlende_gg.png)
 
 ### Lokale Anmeldung am Server und per RDP nur für IT-Abteilung erlauben
@@ -146,3 +148,18 @@ Anschließend werden folgende Richtlinien angepasst:
 - Lokales Anmelden zulassen → Die Berechtigung wird ebenfalls auf die gewünschten Benutzergruppen beschränkt
   
 ![wind-serv](bilder/benutzerrechte.png)
+
+Test:
+- Am Server mit einem Testbenutzer anmelden, der nicht in der IT-Abteilung ist, und prüfen, ob eine lokale Anmeldung möglich ist.
+  
+![wind-serv](bilder/lokal_test.png)
+
+- Am Client mit einem Testbenutzer anmelden, der in der IT-Abteilung ist, und prüfen, ob sich dieser per RDP mit dem Server verbinden kann.
+
+![wind-serv](bilder/rdp_admin.png)
+
+![wind-serv](bilder/rdp_admin1.png)
+
+- Am Client mit einem Testbenutzer anmelden, der nicht in der IT-Abteilung ist, und prüfen, ob sich dieser per RDP mit dem Server verbinden kann.
+
+![wind-serv](bilder/rdp_test.png)
