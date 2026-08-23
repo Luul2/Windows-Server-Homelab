@@ -134,6 +134,7 @@ Diese Richtlinie legt fest, welche Benutzergruppen sich lokal oder per RDP am Se
 
 Für die Aktivierung von RDP zuerst im Gruppenrichtlinienverwaltungs-Editor eine neue GPO erstellen und bearbeiten.
 Zu dem folgendem Pfad navigieren:
+
 `Computerkonfiguration → Richtlinien → Administrative Vorlagen → Windows-Komponenten → Remotedesktopdienste → Remotedesktopsitzungshost → Verbindungen` 
 
 Anschließend die folgende Richtlinie aktivieren: 
@@ -150,15 +151,15 @@ Eine neue eingehende Regel erstellen mit TCP und Port 3389:
 
 Die GPO entsprechend zuweisen.
 
-Zusätzlich zu dieser muss eine GPO erstellt werden, in der definiert wird, welche Benutzergruppen sich lokal oder über Remotedesktopdienste am Server anmelden dürfen.
+Zusätzlich muss eine GPO erstellt werden, in der definiert wird, welche Benutzergruppen sich lokal oder über Remotedesktopdienste am Server anmelden dürfen.
 
 Hierzu wird zu folgendem Pfad navigiert:
 
 `Computerkonfiguration → Richtlinien → Windows-Einstellungen → Sicherheitseinstellungen → Lokale Richtlinien → Zuweisen von Benutzerrechten`
 
 Anschließend werden folgende Richtlinien angepasst:
-- Anmelden über Remotedesktopdienste zulassen → IT-Sicherheitsgruppe (z. B. GG_IT) wird hinzugefügt, damit nur autorisierte Benutzer per RDP auf den Server zugreifen können
-- Lokales Anmelden zulassen → Die Berechtigung wird ebenfalls auf die gewünschten Benutzergruppen beschränkt
+- Anmelden über Remotedesktopdienste zulassen → globale Sicherheitsgruppe hinzufügen, für die der Zugriff erlaubt sein soll.
+- Lokales Anmelden zulassen → globale Sicherheitsgruppe hinzufügen, die sich lokal anmelden darf
   
 <p align="center"><img src="bilder/benutzerrechte.png"></p> 
 
