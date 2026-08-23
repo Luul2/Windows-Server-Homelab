@@ -6,6 +6,15 @@ Voraussetzungen
  - Virtuelle Maschine mit Windows Client, der der Domäne beigetreten ist
  - Netzwerkverbindung zwischen Server und Client
 
+## Inhaltsverzeichnis
+
+- [Umsetzung des AGDLP-Prinzips im Active-Directory](#umsetzung-des-agdlp-prinzips-im-active-directory)
+- [Erstellen von Gruppenrichtlinien im Gruppenrichtlinienverwaltungs-Editor](#erstellen-von-gruppenrichtlinien-im-gruppenrichtlinienverwaltungs-editor)
+  - [Kennwortrichtlinie](#kennwortrichtlinie)
+  - [Kontosperrungsrichtlinie](#kontosperrungsrichtlinie)
+  - [Laufwerkfreigabe](#laufwerkfreigabe)
+  - [Lokale Anmeldung am Server und per RDP nur für IT-Abteilung erlauben](#lokale-anmeldung-am-server-und-per-rdp-nur-für-it-abteilung-erlauben)
+
 ## Umsetzung des AGDLP-Prinzips im Active-Directory
 
 Die Active-Directory-Struktur wurde mithilfe von Organisationseinheiten (OUs) aufgebaut. Zunächst wird nach Standort unterteilt. Innerhalb des Standorts befinden sich die Bereiche Benutzer, Computer und Gruppen.
